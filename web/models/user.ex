@@ -8,6 +8,20 @@ defmodule PhoenixHackaton.User do
     field :lon, :string
     field :impact, :string
     field :email, :string
+
+    field :booking_office, :string
+    field :booking_date, Ecto.DateTime
+    field :ticket_status, :string
+    field :employee_id, :string
+    field :vip_status, :string
+    field :last_name, :string
+
+    field :departure_date, Ecto.DateTime
+    field :arrival_date, Ecto.DateTime
+    field :airline, :string
+    field :travel_class, :string
+    field :booking_type, :string
+
     timestamps()
   end
 
