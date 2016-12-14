@@ -23,6 +23,9 @@ defmodule PhoenixHackaton.Router do
   scope "/api", PhoenixHackaton do
     pipe_through :api
     resources "/flights", FlightController, except: [:new, :edit]
+    # This is a fake "ñapa", do it better later
+    get "flights/:id/users", UserController, :index, as: :flight_users
+    get "flights/:flight/users/:id/options", UserController, :options, as: :user_options
     resources "/users", UserController, except: [:new, :edit]
   end
 end

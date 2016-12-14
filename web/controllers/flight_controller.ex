@@ -2,6 +2,7 @@ defmodule PhoenixHackaton.FlightController do
   use PhoenixHackaton.Web, :controller
 
   alias PhoenixHackaton.Flight
+  alias PhoenixHackaton.User
 
   def index(conn, _params) do
     flights = Repo.all(Flight)

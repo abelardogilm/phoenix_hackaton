@@ -52,4 +52,8 @@ defmodule PhoenixHackaton.UserController do
 
     send_resp(conn, :no_content, "")
   end
+
+  def options(conn, %{"id" => id, "flight" => flight}) do
+    json conn, %{data: %{options: [%{restaurants: 'blah...'},%{hotels: 'blah...'}]}}
+  end
 end
