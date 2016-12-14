@@ -16,6 +16,18 @@ defmodule PhoenixHackaton.UserView do
       lat: user.lat,
       lon: user.lon,
       impact: user.impact,
-      email: user.email}
+      email: user.email,
+      booking_office: user.booking_office,
+      booking_date: user.booking_date,
+      ticket_status: user.ticket_status,
+      employee_id: user.employee_id,
+      vip_status: user.vip_status,
+      last_name: user.last_name,
+      departure_date: user.departure_date,
+      arrival_date: user.arrival_date,
+      airline: user.airline,
+      travel_class: user.travel_class,
+      booking_type: user.booking_type,
+    }
   end
 end
