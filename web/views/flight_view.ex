@@ -18,7 +18,8 @@ defmodule PhoenixHackaton.FlightView do
       flight_id: flight.flight_id,
       from: flight.from,
       to: flight.to,
-      date: flight.flight_date
+      date: flight.flight_date,
+      status: flight.status
     }
   end
 end

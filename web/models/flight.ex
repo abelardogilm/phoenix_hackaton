@@ -6,6 +6,7 @@ defmodule PhoenixHackaton.Flight do
     field :flight_date, Ecto.DateTime
     field :from, :string
     field :to, :string
+    field :status, :string
     timestamps()
   end
 
