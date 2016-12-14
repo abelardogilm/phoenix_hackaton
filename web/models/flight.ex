@@ -3,7 +3,9 @@ defmodule PhoenixHackaton.Flight do
 
   schema "flights" do
     field :flight_id, :string
-
+    field :flight_date, Ecto.DateTime
+    field :from, :string
+    field :to, :string
     timestamps()
   end
 

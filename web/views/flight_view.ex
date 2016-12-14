@@ -11,6 +11,10 @@ defmodule PhoenixHackaton.FlightView do
 
   def render("flight.json", %{flight: flight}) do
     %{id: flight.id,
-      flight_id: flight.flight_id}
+      flight_id: flight.flight_id,
+      from: flight.from,
+      to: flight.to,
+      date: flight.date,
+      }
   end
 end

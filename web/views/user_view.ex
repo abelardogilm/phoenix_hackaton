@@ -11,6 +11,7 @@ defmodule PhoenixHackaton.UserView do
 
   def render("user.json", %{user: user}) do
     %{id: user.id,
+      name: user.name,
       slack_id: user.slack_id,
       lat: user.lat,
       lon: user.lon,
