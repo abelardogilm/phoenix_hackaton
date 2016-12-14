@@ -21,6 +21,7 @@ defmodule PhoenixHackaton.User do
     field :airline, :string
     field :travel_class, :string
     field :booking_type, :string
+    has_many :flights, PhoenixHackaton.Flight
 
     timestamps()
   end

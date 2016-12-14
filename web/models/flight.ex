@@ -10,7 +10,7 @@ defmodule PhoenixHackaton.Flight do
     field :origin_airport, :string
     field :destination_airport, :string
     field :flight_number, :string
-
+    belongs_to :user, PhoenixHackaton.User
     timestamps()
   end
 
