@@ -53,4 +53,14 @@ defmodule PhoenixHackaton.FlightController do
 
     send_resp(conn, :no_content, "")
   end
+
+  def cancelled(conn, %{"id" => id, "day" => day}) do
+    flights = Repo.all( from f in PhoenixHackaton.Flight,
+                        where: f.flight_id == ^id,
+                        select: f
+                      )
+    #Cancel flights
+    # Notify cancelations
+    send_resp(conn, :no_content, "")
+  end
 end
