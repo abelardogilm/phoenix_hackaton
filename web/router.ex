@@ -2,7 +2,7 @@ defmodule PhoenixHackaton.Router do
   use PhoenixHackaton.Web, :router
 
   pipeline :browser do
-    plug :accepts, ["html"]
+    plug :accepts, ["html", "json"]
     plug :fetch_session
     plug :fetch_flash
     plug :protect_from_forgery
@@ -17,6 +17,7 @@ defmodule PhoenixHackaton.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    resources "/flights", FlightController, except: [:new, :edit]
   end
 
   # Other scopes may use custom stacks.
